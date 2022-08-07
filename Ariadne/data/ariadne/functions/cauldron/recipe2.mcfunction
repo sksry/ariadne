@@ -1,0 +1,2 @@
+execute store result score @s seek_temp run data get entity @s ArmorItems[0].tag.Cauldron[{tag:{SeekItem:["ariadne"]}}].Count
+execute as @s[scores={seek_temp=64..}] unless entity @s[nbt={ArmorItems:[{tag:{Cauldron:[{Enum:3}]}}]}] run function ariadne:cauldron/zrecipe2

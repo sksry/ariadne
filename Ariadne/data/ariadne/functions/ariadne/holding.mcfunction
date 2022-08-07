@@ -1,0 +1,1 @@
+execute positioned ~ ~1.2 ~ unless entity @e[tag=ariadne_detector,distance=0] run summon armor_stand ~ ~ ~ {Small:1,Invisible:1,Silent:1,NoGravity:1,Tags:[ariadne_detector],ShowArms:1b}
