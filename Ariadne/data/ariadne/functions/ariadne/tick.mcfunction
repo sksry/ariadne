@@ -5,3 +5,7 @@ execute as @e[tag=ariadne_teleporting] at @s run function ariadne:ariadne/telepo
 
 execute as @a[nbt={SelectedItem:{tag:{SeekItem:["ariadne"]}}}] at @s run function ariadne:ariadne/holding
 execute as @e[tag=ariadne_detector] at @s run function ariadne:ariadne/detector
+
+execute as @a[tag=seek_stringed] run tag @s remove seek_stringed
+execute as @a[scores={seek_string=1..}] run tag @s add seek_stringed
+execute as @a[scores={seek_string=1..}] run scoreboard players set @s seek_string 0
