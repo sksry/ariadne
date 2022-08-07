@@ -9,9 +9,16 @@ execute at @s[scores={seek_stationary=0}] run playsound minecraft:entity.enderma
 execute at @s[scores={seek_stationary=0}] run particle witch ~ ~0.5 ~ 0.35 0.36 0.35 1 75 force
 tag @s[scores={seek_stationary=0}] remove ariadne_finished
 tag @s[scores={seek_stationary=0}] remove ariadne_teleporting
+tag @s[scores={seek_stationary=0}] remove ariadne_teleporting_1
 
+
+give @s[scores={seek_health=0},tag=ariadne_teleporting_1] string{SeekItem:["ariadne"],display:{Name:'{"text":"Ariadne Thread","color":"yellow","italic":false}',Lore:['{"text":"A curious tether to the user\'s\\nhome. An indisputably useful\\ntool for any explorer.","color":"gray","italic":false}']},Enchantments:[{}]}
 tag @s[scores={seek_health=0}] remove ariadne_teleporting
+tag @s[scores={seek_health=0}] remove ariadne_teleporting_1
+
+give @s[tag=seek_sneaked,tag=ariadne_teleporting_1] string{SeekItem:["ariadne"],display:{Name:'{"text":"Ariadne Thread","color":"yellow","italic":false}',Lore:['{"text":"A curious tether to the user\'s\\nhome. An indisputably useful\\ntool for any explorer.","color":"gray","italic":false}']},Enchantments:[{}]}
 tag @s[tag=seek_sneaked] remove ariadne_teleporting
+tag @s[tag=seek_sneaked] remove ariadne_teleporting_1
 scoreboard players set @s[tag=seek_sneaked] seek_stationary 0
 
 

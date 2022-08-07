@@ -7,6 +7,7 @@ tag @a[tag=ariadne_user,scores={seek_stationary=1..}] add ariadne_failed
 tag @a[tag=ariadne_user,nbt={OnGround:0b}] add ariadne_failed
 
 tag @a[tag=ariadne_user,tag=!ariadne_failed] add ariadne_teleporting
+execute as @s[nbt=!{HandItems:[{tag:{SeekItem:["homeward_feather"]}}]}] run tag @a[tag=ariadne_user,tag=!ariadne_failed] add ariadne_teleporting_1
 scoreboard players set @a[tag=ariadne_user,tag=!ariadne_failed] seek_stationary 120
 
 execute as @s[nbt=!{HandItems:[{tag:{SeekItem:["homeward_feather"]}}]}] as @a[tag=ariadne_failed,gamemode=!creative] run give @s string{SeekItem:["ariadne"],display:{Name:'{"text":"Ariadne Thread","color":"yellow","italic":false}',Lore:['{"text":"A curious tether to the user\'s\\nhome. An indisputably useful\\ntool for any explorer.","color":"gray","italic":false}']},Enchantments:[{}]}
